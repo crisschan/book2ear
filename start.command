@@ -21,7 +21,7 @@ if ! command_exists python3; then
     exit 1
 fi
 
-echo "欢迎使用 Book2Podcast！"
+echo "欢迎使用 Book2ear！"
 echo "正在准备启动环境，请稍候..."
 echo "----------------------------------------"
 
@@ -64,7 +64,7 @@ echo "----------------------------------------"
 # We need to find an available port and then open the browser.
 # Gradio by default uses 7860. Let's start the python script
 # and then open the browser.
-(sleep 10 && open http://127.0.0.1:7860) &
+(sleep 6 && open http://127.0.0.1:7860) &
 
 python3 web.py
 
