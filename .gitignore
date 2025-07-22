@@ -235,3 +235,6 @@ __marimo__/
 *.tif
 *.tiff
 *.jpg
+
+
+.DS_Store
