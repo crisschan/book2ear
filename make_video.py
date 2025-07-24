@@ -20,6 +20,9 @@ def make_video(audio_folder='in_audio', image_folder='out_pic', output='out_vide
     # 按文件名排序图片
     image_files = sorted([f for f in os.listdir(image_folder) if f.lower().endswith(('.png', '.jpg', '.jpeg', '.bmp', '.gif'))],
                         key=lambda x: int(os.path.splitext(x)[0]) if os.path.splitext(x)[0].isdigit() else x)
+    ## 按照图片数量计算一张图片的展示时间
+    duration_per_image = audio_duration / len(image_files)
+    print(f'Duration per image: {duration_per_image}')
     if not image_files:
         print('No image file found!')
         return
